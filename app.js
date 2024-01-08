@@ -19,14 +19,9 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-// app.use(CORS({origin:['http://localhost:5173'], // Update with your client's origin
-// methods: ["GET", "POST", "PUT", "DELETE"],
-// credentials: true // Allow credentials (cookies, etc.)
-// }));
 
-// app.use(CORS())
 
-app.use(CORS({ origin: 'http://localhost:5173', credentials: true }));
+app.use(CORS({ origin: 'https://artifitia.onrender.com', credentials: true }));
 
 app.use('/files', express.static('uploads'));
 app.use(bodyParser.json());
