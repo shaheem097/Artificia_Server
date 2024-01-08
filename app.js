@@ -20,8 +20,9 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 
+// http://localhost:5173/
 
-app.use(CORS({ origin: 'https://artifitia.onrender.com', credentials: true }));
+app.use(CORS({ origin: 'https://artifitia.vercel.app', credentials: true }));
 
 app.use('/files', express.static('uploads'));
 app.use(bodyParser.json());
